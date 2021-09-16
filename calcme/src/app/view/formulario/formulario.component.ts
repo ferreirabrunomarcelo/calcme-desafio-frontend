@@ -29,7 +29,7 @@ export class FormularioComponent implements OnInit {
     
   }
 
-  savePessoa(fData: any,formDirective: FormGroupDirective) {
+  savePessoa(formDirective: FormGroupDirective) {
     this.pessoa = this.formulario.value;
     
     this.pessoaService.savePessoa(this.pessoa);
@@ -39,11 +39,6 @@ export class FormularioComponent implements OnInit {
     this._snackBar.open("Cadastro realizado com sucesso.", '',{
       duration: 2000
     });
-    
-    //this.formulario.reset();
-    //this.formulario.markAsPristine();
-    //this.formulario.markAsUntouched();
-    //this.formulario.updateValueAndValidity();
   
   }
 
