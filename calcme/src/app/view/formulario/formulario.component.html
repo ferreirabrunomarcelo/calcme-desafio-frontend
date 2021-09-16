@@ -1,0 +1,33 @@
+<div class="content">
+    <mat-card class="example-card">
+        <mat-card-header>
+            <img mat-card-image src="./assets/calcme.jpeg">
+        </mat-card-header>
+        <mat-card-content>
+            <div class="container">
+                <form (ngSubmit)="savePessoa(formulario,formDirective)" [formGroup]="formulario" #formDirective="ngForm">
+
+                    <mat-form-field>
+                        <mat-label>Nome *</mat-label>
+                        <input matInput id="nome" name="nome" placeholder="Ex. joão da silva" formControlName="nome" />
+                    </mat-form-field>
+
+                    <mat-form-field>
+                        <mat-label>E-mail *</mat-label>
+                        <input type="email" matInput id="email" name="email" placeholder="Ex. email@example.com" formControlName="email">
+                    </mat-form-field>
+
+                    <mat-form-field>
+                        <mat-label>Telefone *</mat-label>
+                        <input matInput id="telefone" name="telefone" placeholder="Ex. 11940028922" formControlName="telefone" />
+                    </mat-form-field>
+
+                    <div class="save-button">
+                        <button mat-button [disabled]="formulario.invalid">Salvar</button>
+                    </div>
+
+                </form>
+            </div>
+        </mat-card-content>
+    </mat-card>
+</div>
